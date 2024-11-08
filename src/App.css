@@ -24,7 +24,6 @@
 
 .nav-bar-logo {
   width: 80px;
-  
 }
 
 
@@ -82,7 +81,7 @@ align-self: flex-end;
 
 
 .main-screen {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -102,7 +101,7 @@ align-self: flex-end;
   border-radius: 20px;
   position: absolute;
   bottom: 3rem;
-  left: 50%;
+  right: 50%;
   display: flex;
   justify-content: center;
   padding: 2.5px;
@@ -144,6 +143,15 @@ align-self: flex-end;
 		transform: translateY(1.5rem);
   }
 
+}
+
+
+.main-screen-buttons-container {
+ display: flex;
+ gap: 1.5rem;
+ position: absolute;
+ bottom: 3rem;
+ left: 3rem;
 }
 
 
@@ -225,7 +233,7 @@ align-self: flex-end;
 }
 
 
-.profile-pic-container {
+.main-pic-container {
   width: 25rem;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -522,6 +530,7 @@ article h3 {
   font-size: 40px;
   position: absolute;
   transition: top 0.8s ease; 
+  transition: color 0.8s ease; 
 }
 
 
@@ -530,7 +539,6 @@ article h3 {
 }
 
 .widget-five {
-  flex: none;
   height: 34%;
   width: 24%;
   left: calc(50.591280653950975% - 100% / 4);
@@ -602,8 +610,8 @@ article h3 {
   width: 90%;
   height: 25rem;
   grid-auto-rows: 185px;
-  grid-template-columns: repeat(5, minmax(201px, 1fr));
-  grid-template-rows: repeat(3, 185px);
+  grid-template-columns: repeat(5,  1fr);
+  grid-template-rows: repeat(6,  1fr);
   display: grid;
   gap: 30px;
 }
@@ -668,14 +676,14 @@ article h3 {
 
 
 
-h2 {
+footer h2 {
   font-weight: 500;
   text-align: center;
   font-size: var(--m);
   margin: 0;
 }
 
-h3 {
+footer h3 {
   font-weight: 500;
   font-size: calc(0.6 * var(--m));
   margin: 0;
@@ -683,7 +691,7 @@ h3 {
 
 
 
-button {
+footer button {
   background-color: #000;
   font-size: calc(0.4 * var(--m));
   border: none;
@@ -770,7 +778,7 @@ footer::before {
   border-radius: calc(0.5 * var(--m));
 }
 
-img {
+footer img {
   height: calc(0.3 * var(--m));
   object-fit: cover;
 }
@@ -809,10 +817,6 @@ a {
 }
 
 @media screen and (max-width: 700px) {
-  footer {
-    flex-direction: column;
-    padding: 5rem 20vw;
-  }
   .col {
     width: 100%;
   }
@@ -840,7 +844,15 @@ a {
 
 
 
-
+.profile-connect-container {
+  position: absolute;
+  display: flex;
+  justify-Content: center;
+  align-Items: center;
+  gap: 2.5;
+  top: 30px;
+  left: 15%;
+}
 
 
 
@@ -849,7 +861,6 @@ a {
 .profile-connect {
   aspect-ratio: 1;
   width: 50px;
-  background-color: green;
   border-radius: 100%;
   top: 0;
   overflow: hidden;
@@ -961,3 +972,268 @@ a {
     opacity: 0;
   }
 }
+
+
+.ti-brand-javascript:hover {
+  color: #F7E025;
+}
+.ti-brand-docker:hover {
+  color: #1072D8;
+}
+.ti-brand-css3:hover {
+  color: #2D53E5;
+}
+.ti-brand-golang:hover {
+  color: #00A7D0;
+}
+.ti-brand-flutter:hover {
+  color: #5CC3F0;
+}
+.ti-brand-kotlin:hover {
+  color: #9C31E9;
+}
+.ti-brand-vue:hover {
+  color: #47BA87;
+}
+.ti-brand-git:hover {
+  color: #E84E31;
+}
+.ti-brand-visual-studio:hover {
+  color: #0174B4;
+}
+.ti-brand-php:hover {
+  color: #7377AD;
+}
+.ti-brand-html5:hover {
+  color: #DD4B25;
+}
+.ti-brand-react-native:hover {
+  color: #5ED3F3;
+}
+.ti-brand-python:hover {
+  color: #346E9F;
+}
+.ti-brand-stackoverflow:hover {
+  color: #F6842D;
+}
+.ti-brand-vite:hover {
+  color: #FACE48;
+}
+.ti-api:hover {
+  color: #F36D2C;
+}
+.ti-brand-c-sharp:hover {
+  color: #3F0894;
+}
+.ti-brand-typescript:hover {
+  color: #2F74C0;
+}
+.ti-brand-firebase:hover {
+  color: #FF9408;
+}
+.ti-brand-github:hover {
+  color: #2C3036;
+}
+.ti-brand-angular:hover {
+  color: #D6002F;
+}
+.ti-sdk:hover {
+  color: #90C855;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (phones in portrait mode) */
+@media (max-width: 599px) {
+  body {
+  }
+  .nav-bar {
+    width: 90%;
+    top: 1.5rem;
+  }
+  .main-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .second-screen {
+    height: auto;
+    overflow: hidden;
+    align-items: start;
+  }
+  .main-pic-container {
+    width: 15rem;
+  }
+  .rocket-gif {
+    width: 15rem;
+    height: 15rem;
+  }
+  .main-width-text {
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    width: 90%;
+    margin-inline: auto;
+  }
+  .main-screen-buttons-container {
+    bottom: 0rem;
+    gap: 1;
+  }
+  .scroll-mouse {
+    right: 3.5rem;
+    bottom: 0rem;
+  }
+  .widgets-container {
+    width: 95%;
+    height: 70rem;
+    gap: 25px;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1,  1fr);
+    overflow: hidden;
+  }
+  .widget-one {
+    width: 11rem;
+    height: 330px;
+    top: 0;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  .widget-two {
+    width: 23rem;
+    height: 165px;
+    top: calc(520px / 1);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    margin-inline: auto; 
+  }
+  .widget-three {
+    width: 23rem;
+    height: 165px;
+    top: calc( 340px / 1);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    margin-inline: auto; 
+  }
+  .widget-four {
+    width: 23rem;
+    height: 370px;
+    top: calc(690px / 1);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    margin-inline: auto; 
+  }
+  .widget-five {
+    height: 180px;
+    width: 12rem;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    left: 49%;
+
+  }
+  .toolbox-icons-container i {
+    font-size: 30px;
+  }
+  .cards-container {
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(5, 1fr);  
+    height: 90%;
+    gap: 100px;
+    margin-top: 150px;
+  }
+  .third-screen {
+    height: max-content;
+    overflow: hidden;
+    width: 95%;
+  }
+  .cards-container .card  {
+    height: 30rem;
+  }
+  footer {
+    height: 90vh;
+    flex-direction: column;
+    padding: 5rem 0vw;
+    overflow: hidden;
+  }
+  .footer-background-box {
+    top: 80px;
+    width: 90%;
+    height: 100px;
+    margin-right:4%;
+  }
+  .profile-connect-container  {
+    left: 7%;
+  }
+  .nav-bar-logo {
+    width: 50px;
+    height: 80px;
+  }
+  .widget-five-pic {
+    height: 180%;
+  }
+  .agenda-pic {
+    top: 120px;
+  }
+  .col3 {
+    width: 95%;
+    margin-inline: auto;
+  }
+  .col2 {
+    width: 95%;
+    margin-inline: auto;
+  }
+}
+
+
+/* Medium devices (tablets in portrait mode) */
+@media (min-width: 600px) and (max-width: 899px) {}
+
+/* Large devices (tablets in landscape mode, small desktops) */
+@media (min-width: 900px) and (max-width: 1199px) {}
+
+/* Extra large devices (desktops, large screens) */
+@media (min-width: 1200px) {}

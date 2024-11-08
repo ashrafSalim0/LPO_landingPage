@@ -2,14 +2,8 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Loading from './screens/Loading';
-
-function menubutton() {
-  console.log('clicked');
-  document.querySelector('.short-line').classList.toggle('short-line-active');
-  document.querySelector('.long-line').classList.toggle('long-line-active');
-  document.querySelector('.last-line').classList.toggle('last-line-active');
-}
-
+import Footer from './components/footer';
+import Navbar from './components/navbar';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -35,28 +29,16 @@ function App() {
       <div className={`app-content ${loading ? 'hidden' : ''}`}>
     <div className='main-screen'>
       
-    <div className='nav-bar'>
-      <button className='menu-button-container' onClick={() => menubutton()}>
-        <div className='menu-button-line short-line'></div>
-        <div className='menu-button-line long-line'></div>
-        <div className='menu-button-line short-line last-line'></div>
-      </button>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', fontSize: 18}}>
-      <img className='nav-bar-logo' src='./assets/images/lpologo.png'/>
-      <span style={{fontFamily: 'D-DIN Condensed, sans-serif', fontWeight: 'bold', opacity: 0.8,}}>Libyan Programmers Org</span>
-      </div>
-     </div>
+    <Navbar/>
       <div className='scroll-mouse'>
         <div></div>
       </div>
-      <div style={{display: 'flex', gap: '1.5rem', position: 'absolute', bottom: '3rem', left: '3rem'}}>
+      <div className='main-screen-buttons-container'>
           <button className='button-navigation'>Projects</button>
           <button className='button-navigation'>About</button>
         </div>
-        <div className='profile-pic-container'>
+        <div className='main-pic-container'>
         <img src="./assets/gif/techny-rocket.gif" alt="" className='rocket-gif' />
-        <img src="./assets/gif/techny-rocket.gif" alt="" className='rocket-gif outer-gif' />
-
         </div>  
 
         <p className='main-width-text'> our expertise lies in<br></br> turning <span className='header__hero--heading-gradient'>creative ideas</span> <br></br> into actual products.</p>
@@ -82,7 +64,7 @@ function App() {
         <p style={{textAlign: 'center'}} className='widget-title'>Our Team</p>
         <p style={{textAlign: 'center'}} className='widget-desc'>Want to get to know our team members? Check this out</p>
         </div>
-        <div style={{position: 'absolute', display: 'flex', justifyContent: 'centere', alignItems: 'center', gap: 2.5, top: 30, left: '15%',}}>
+        <div className='profile-connect-container'>
         <div className='profile-connect'>
           <img className='profile-pfp' src='./assets/images/pfp1.png'/>
         </div>
@@ -197,32 +179,7 @@ function App() {
     </div>
    
    
-    <footer id="footer">
-    <div className='footer-background-box header__hero--heading-gradient'/>
-  <div class="col col1">
-    <h3>Libyan Programmers Org</h3>
-    <p style={{marginTop: 10, marginBottom: 10,}}>Made with <span style={{color: '#BA6573',}}>❤</span> by LPO Team</p>
-    <div  style={{marginTop: 10, marginBottom: 10}} class="social">
-      <a href="https://codepen.io/Juxtopposed" target="_blank" class="link"><i class="ti ti-brand-facebook"></i></a>
-      <a href="https://twitter.com/juxtopposed" target="_blank" class="link"><i class="ti ti-brand-telegram"></i></a>
-      <a href="https://youtube.com/@juxtopposed" target="_blank" class="link"><i class="ti ti-brand-github"></i></a>
-    </div>
-    <p style={{color: '#818181', fontSize: 'smaller'}}>2024 © All Rights Reserved</p>
-  </div>
-  <div class="col col2">
-    <p>About</p>
-    <p>Our mission</p>
-    <p>Privacy Policy</p>
-    <p>Terms of service</p>
-  </div>
-  <div class="col col3">
-    <p>Services</p>
-    <p>Products</p>
-    <p>Join our team</p>
-    <p>Partner with us</p>
-  </div>
-  <div class="backdrop"></div>
-</footer>
+    <Footer/>
 </div>
     </>
   );
