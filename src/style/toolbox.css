@@ -1,0 +1,66 @@
+.section-title {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin-inline: 40px;
+}
+
+.toolbox-main-screen {
+    height: 60vh;
+}
+
+.toolbox-second-screen {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: auto;
+}
+
+
+
+.techs-container {
+    width: 95vw;
+    height: max-content;
+    box-shadow: 0 0 40px rgba(58, 56, 56, 0.6);
+    border-radius: 20px;
+    border: 3px solid #6bc4f835;
+    display: grid; 
+    padding: 15px;
+    grid-template-columns: repeat(10, 2fr);
+    grid-template-rows: repeat(1 1fr);
+    row-gap: 30px;
+    justify-content: center;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+
+.tech-item {
+    width: 120px;
+    height: 120px;
+    background-color: #121212;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-item img {
+    width: 54px;
+    user-select: none;
+}
+
+
+@media (max-width: 599px) {
+    .techs-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .tech-item {
+        width: 100%;
+     }
+     .section-title {
+        margin-inline: 15px;
+     }
+}

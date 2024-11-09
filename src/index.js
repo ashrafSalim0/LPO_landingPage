@@ -5,10 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Loading from './screens/Loading';
 import Ourteam from './screens/ourTeam';
+import Toolbox from './screens/toolbox';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Ourteam />
+    <App />
   </React.StrictMode>
 );
 

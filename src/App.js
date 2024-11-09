@@ -43,7 +43,12 @@ function App() {
 
         <p className='main-width-text'> our expertise lies in<br></br> turning <span className='header__hero--heading-gradient'>creative ideas</span> <br></br> into actual products.</p>
     </div>
-    <div className='second-screen'>
+    <div className='second-screen' style={{flexDirection: 'column'}}>
+    <div className='page-title-container'>
+        <span className='page-title'>Our Team Members</span>
+        <span className='page-desc'>Take a look at our team members and get to know the faces behind what we do. We're all about collaboration and passion!</span>
+
+    </div>
       <div className='widgets-container'>
         <div className='widget-one'>
           <div style={{ position: 'relative', top: '80%'}}>
@@ -158,6 +163,12 @@ function App() {
     </div>
 
     <div className='third-screen'>
+
+    <div className='page-title-container'>
+        <span className='page-title'>Our Team Members</span>
+        <span className='page-desc'>Take a look at our team members and get to know the faces behind what we do. We're all about collaboration and passion!</span>
+
+    </div>
       <div className='cards-container'>
         <div className='card'>
             <span className='card-number-title'>01</span>
