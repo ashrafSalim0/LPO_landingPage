@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
+import '../style/Homepage.css';
 import Loading from './Loading';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
@@ -12,7 +12,7 @@ function Toolbox() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer); 
   }, []);
@@ -27,7 +27,7 @@ function Toolbox() {
     <Navbar/>
 
     <div className='page-title-container'>
-    <span className='page-title' style={{marginTop: '25%'}}>Our Team Members</span>
+    <span className='page-title' >Our Team Members</span>
     <span className='page-desc'>Take a look at our team members and get to know the faces behind what we do. We're all about collaboration and passion!</span>
     </div>
     

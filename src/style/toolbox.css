@@ -3,10 +3,12 @@
     font-weight: bold;
     font-size: 40px;
     margin-inline: 40px;
+    
 }
 
 .toolbox-main-screen {
     height: 60vh;
+    
 }
 
 .toolbox-second-screen {
@@ -15,6 +17,7 @@
     flex-direction: column;
     height: auto;
 }
+
 
 
 
@@ -55,6 +58,19 @@
 @media (max-width: 599px) {
     .techs-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .tech-item {
+        width: 100%;
+     }
+     .section-title {
+        margin-inline: 15px;
+     }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .techs-container {
+        grid-template-columns: repeat(5, 1fr);
         gap: 10px;
     }
     .tech-item {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
+import '../style/Homepage.css';
 function menubutton() {
   console.log('clicked');
   document.querySelector('.short-line').classList.toggle('short-line-active');
